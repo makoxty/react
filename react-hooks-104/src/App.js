@@ -1,8 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const App = props => {
+
   const [state, setState] = useState(props);
   const { name, price } = state;
+
+  // 画面を再描画すると呼ばれる
+  useEffect(() => {
+    console.log("useEffectメソッドです");
+  });
+
+  // 初期表示時しか呼ばれない
+  useEffect(() => {
+    console.log("[]を指定したuseEffectメソッドです");
+  }, []);
+
+  // 特定のパラメータが変更された時だけ呼び出される
+  useEffect(() => {
+    console.log("nameを変更しました。");
+  }, [name]);
 
   return (
     <>
