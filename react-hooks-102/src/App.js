@@ -6,8 +6,8 @@ const App = props => {
   const [price, setPrice] = useState(props.price);
 
   const reset = () => {
-    setPrice(props.price);
-    setName(props.name);
+    setPrice(1000);
+    setName('');
   }
 
   return (

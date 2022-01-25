@@ -16,6 +16,7 @@ const App = props => {
   }, []);
 
   // 特定のパラメータが変更された時だけ呼び出される
+  // 今回の場合は name が変更された時
   useEffect(() => {
     console.log("nameを変更しました。");
   }, [name]);
